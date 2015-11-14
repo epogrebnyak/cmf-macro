@@ -13,7 +13,7 @@ focusing on survivorship: highlights from the third European consensus conferenc
 treatment of germ-cell cancer."
 
 
-Ряды данных в формате Excel: [kep.xlsx][kep-at-git]. Исходная публикация на сайте Росстата: [www.gks.ru][gks-stei]
+Р СЏРґС‹ РґР°РЅРЅС‹С… РІ С„РѕСЂРјР°С‚Рµ Excel: [kep.xlsx][kep-at-git]. РСЃС…РѕРґРЅР°СЏ РїСѓР±Р»РёРєР°С†РёСЏ РЅР° СЃР°Р№С‚Рµ Р РѕСЃСЃС‚Р°С‚Р°: [www.gks.ru][gks-stei]
 
 [kep-at-git]: https://github.com/epogrebnyak/rosstat-kep-data/blob/master/src2/output/kep.xlsx?raw=true
 [gks-stei]: http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/ru/statistics/publications/catalog/doc_1140080765391

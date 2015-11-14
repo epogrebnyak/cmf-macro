@@ -6,9 +6,9 @@
 
 ##Course outlines  
 
-[Suggested link][#Beyer2013]
+[Suggested link][Beyer2013]
 
-[#Beyer2013]: http://dx.doi.org/10.1093/annonc/mds579 "Maintaining success, reducing treatment burden,
+[Beyer2013]: http://dx.doi.org/10.1093/annonc/mds579 "Maintaining success, reducing treatment burden,
 focusing on survivorship: highlights from the third European consensus conference on diagnosis and 
 treatment of germ-cell cancer."
 

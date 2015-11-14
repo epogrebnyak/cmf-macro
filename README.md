@@ -5,64 +5,87 @@
 1. Introduction 
 
 1.1. Objectives of macroeconomic research, areas of research, methods.
-1.2. Macroeconomic statistic frameworks (IO tables, SNA, flow of funds, bank sector statistics)
-1.3. Time series data sources (FRED + Russian statistics)
 
+    Diebold, F.X., The Past, Present, and Future of Macroeconomic Forecasting, Journal of Economic Perspectives, 12, 1998, 175-192. 
 
+1.2. Review of macroeconomic statistics frameworks:
+    - IO tables
+	- SNA
+	- Flow of funds
+	
+1.3. Time series data and seasonal adjustment1
+1.3.1. Time series data sources (FRED/Quandl + Russian statistics) 
+    - https://research.stlouisfed.org/fred2/
+	- https://www.quandl.com/
+	- https://github.com/epogrebnyak/rosstat-kep-data
 
-2. Detrending macroecomic time series
+1.3.2. Seasonal adjustment (X11, Traumo/SEATS).
 
-3. Nowcasting and coincident indicators:  
+	
+2. Working with macroeconomic time series
 
-   James H. Stock, Mark W. Watson. A Probability Model of The Coincident Economic Indicators. 
-   URL: http://www.nber.org/papers/w2772
+2.1. Detrending/filtering and business cycle 
 
-4. Prices: CPI modelling
+    Introduction to Macro Data. Karel Mertens, Cornell University
+    URL: https://courses.cit.cornell.edu/econ614/introduction.pdf       
 
-GDP components -------------------------------------
+	Detrending and business cycle facts. Fabio Canova
+	URL: http://apps.eui.eu/Personal/Canova/Articles/debucy.pdf
+	
+	Resuscitating real business cycles. Robert G. King, Sergio T. Rebelo. // 
+	Handbook of Macroeconomics, Volume 1, Edited by J.B. Taylor and M. Woodford	
+	URL: http://www.tau.ac.il/~yashiv/rbc_handbook.pdf
+	
+2.2. Vector autoregression (VAR) models
 
-6. Consumption 
-7. Investment
-8. Goverment spending 
+(*) Modeling the United States Economy. 
+	URL: http://es.mathworks.com/help/econ/examples/modeling-the-united-states-economy.html
+	(note: text on web site is confusing, this is not a DSGE model, this is a VAR aproximation 
+	       used to compare with DSGE results. We are interested in VAR here.)
 
-----------------------------------------------------
+2.3. Nowcasting and coincident indicators
 
-9. Balance of payments (BOP)
+(*) James H. Stock, Mark W. Watson. A Probability Model of The Coincident Economic Indicators. 
+    URL: http://www.nber.org/papers/w2772
+   
+3. Estimated structural modelling 
 
-10. Foreign exchange rates
+3.1. Modelling GDP components
 
+3.1.1. Consumption 
+3.1.2. Investment
+3.1.3. Government spending (?)
+
+3.2. Prices and inflation.
+     
+    ...
+	
+3.3. Large-scale models: Fair model - US Economy
+
+    ...
+
+4. Calibrated models: dynamic stochastic general equilibrium models (DSGE)
+- http://www3.eeg.uminho.pt/economia/nipe/summerschool2012/index_ficheiros/outline.pdf
+- http://www.econ.nyu.edu/user/gertlerm/jep.21.4.pdf
+
+6. Collection and comparison of models 
+
+    Wieland, Volker,  Tobias Cwik, Gernot J. Müller, Sebastian Schmidt and Maik Wolters. A New comparative approach 
+	to macroeconomic modeling and policy analysis. Journal of Economic Behavior and Organization, August 2012, 
+	Vol. 83, 523-541 
+(*) URL: http://www.macromodelbase.com/
+
+7. Monetary and fiscal policy rules
+
+    See reading list in [Monetary Policy: Theory and Practice - Kiel ASP - Volker Wieland](https://www.ifw-kiel.de/ausbildung/asp/outlines/paper/Wieland2014.pdf)
+
+8. Balance of payments and foreign exchange rates
+
+- Balance of payments (BOP)
 - Puzzles in foreign exchange rate forecasting 
-
 - Review of methods:
 
-   Barbara Rossi. Exchange Rate Predictability. February 14, 2013
-   URL: http://crei.cat/people/rossi/Rossi_ExchangeRatePredictability_Feb_13.pdf
+(*) Barbara Rossi. Exchange Rate Predictability. February 14, 2013
+    URL: http://crei.cat/people/rossi/Rossi_ExchangeRatePredictability_Feb_13.pdf
 
-
-11. Monetary and fiscal policy rules
 ```
-
-Peer courses:
-
-- Quantitative Economics.  Thomas J. Sargent and John Stachurski. URL: http://quant-econ.net/
-
-- CEMFI. Nowcasting, Short-Term Forecasting, and Turning-Points Real-Time Detection. A Guide for Empirical Economists.http://www.cemfi.es/studies/css/course.asp?c=14
-
-- Kiel/Cass. THE ECONOMICS OF EXCHANGE RATES. https://www.ifw-kiel.de/ausbildung/asp/outlines/paper/Sarno_15.pdf
-
-In FX modelling:
-
-- RATS/Kiel
-- Lucio/Kiel
-- Rossi/BGSE
-
-
-Useful outlines:
-- Volker Wieland: http://www.macromodelbase.com/
-
-- Course on Advanced Macroeconomic Forecasting (JV14.09) - See reading list. URL:
-http://www.jvi.org/uploads/tx_abajvicoursemanager/Reading_List_-_MFA_JV14.09_01.pdf
-
-- Kiel Econometrics. https://www.ifw-kiel.de/ausbildung/asp/outlines/paper/morales-2016
-
-- http://www.econ.nyu.edu/user/gertlerm/jep.21.4.pdf

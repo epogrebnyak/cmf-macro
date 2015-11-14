@@ -36,6 +36,9 @@
 	Handbook of Macroeconomics, Volume 1, Edited by J.B. Taylor and M. Woodford	
 	URL: http://www.tau.ac.il/~yashiv/rbc_handbook.pdf
 	
+	James H. Stock, Mark W. Watson. Business cycle fluctuations in US macroeconomic time series
+	URL: http://www.nber.org/papers/w6528.pdf
+	
 2.2. Vector autoregression (VAR) models
 
 (*) Modeling the United States Economy. 
@@ -53,8 +56,16 @@
 3.1. Modelling GDP components
 
 3.1.1. Consumption 
+
+    ...
+
 3.1.2. Investment
+
+    ...
+
 3.1.3. Government spending (?)
+
+    ...
 
 3.2. Prices and inflation.
      
@@ -83,6 +94,9 @@
 
 - Balance of payments (BOP)
 - Puzzles in foreign exchange rate forecasting 
+
+    ...
+
 - Review of methods:
 
 (*) Barbara Rossi. Exchange Rate Predictability. February 14, 2013

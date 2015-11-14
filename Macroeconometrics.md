@@ -1,9 +1,9 @@
 #Macroeconometrics: course outlines and bibliography
 
 ## Handbooks of...
-* Macroeconomics
-* Economic forcasting http://www.sciencedirect.com/science/handbooks/15740048/1/part/PA
-* Monetary Economics
+* Macroeconomics <http://www.sciencedirect.com/science/handbooks/15740048/1/part/PA>
+* Economic forcasting <http://www.sciencedirect.com/science/handbooks/15740048/1/part/PA>
+* Monetary Economics <http://www.sciencedirect.com/science/handbooks/15734498/1>
 
 ##Textbooks
 
@@ -42,16 +42,16 @@
 * [CEMFI. Nowcasting, Short-Term Forecasting, and Turning-Points Real-Time Detection. A Guide for Empirical Economists.](http://www.cemfi.es/studies/css/course.asp?c=14)
 * [Monetary Policy: Theory and Practice - Kiel ASP - Volker Wieland](https://www.ifw-kiel.de/ausbildung/asp/outlines/paper/Wieland2014.pdf)
 
-*In FX modelling*
-- Lucio/Kiel. THE ECONOMICS OF EXCHANGE RATES. https://www.ifw-kiel.de/ausbildung/asp/outlines/paper/Sarno_15.pdf
+*FX modelling*
+- Lucio/Kiel. The economics of exchange rates. https://www.ifw-kiel.de/ausbildung/asp/outlines/paper/Sarno_15.pdf
 - RATS/Kiel
 - Rossi/BGSE
 
 ## History of methods
 * Diebold, F.X., The Past, Present, and Future of Macroeconomic Forecasting, Journal of Economic Perspectives, 12, 1998, 175-192. 
 * Larry Summers, 1991. The Scientific Illusion of Empirical Macroeconomics, Scandinavian Journal of Economics 93(2): 129-148. 
-* [Kennedy, Peter. Sinning in the Basement: What Are the Rules? The Ten Commandments of Applied Econometrics] http://www.stat.columbia.edu/~gelman/stuff_for_blog/KennedyJEconomicSurveys2002.pdf
-* [Ray C. Fair. Has macro progressed?] http://fairmodel.econ.yale.edu/mmm/mmsecond/2009c.pdf
+* [Kennedy, Peter. Sinning in the Basement: What Are the Rules? The Ten Commandments of Applied Econometrics](http://www.stat.columbia.edu/~gelman/stuff_for_blog/KennedyJEconomicSurveys2002.pdf)
+* [Ray C. Fair. Has macro progressed?](http://fairmodel.econ.yale.edu/mmm/mmsecond/2009c.pdf)
 * [Empirical Macroeconomics. Scientific Background on the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 2011] (http://www.nobelprize.org/nobel_prizes/economic-sciences/laureates/2011/advanced-economicsciences2011.pdf)
 
 -----------------

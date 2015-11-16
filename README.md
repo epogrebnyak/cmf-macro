@@ -1,10 +1,10 @@
-# Macroeconomic course for CMF
+# Emprircal Macro - macroeconomic course for CMF
 14:01 13.11.2015
 
 ```
 1. Introduction 
 
-1.1. Objectives of macroeconomic research, areas of research, methods.
+1.1. Objectives of macroeconomic research, areas of research, methods/controversies.
 
     Diebold, F.X., The Past, Present, and Future of Macroeconomic Forecasting, Journal of Economic Perspectives, 12, 1998, 175-192. 
 
@@ -16,12 +16,19 @@
 1.3. Time series data and seasonal adjustment1
 1.3.1. Time series data sources (FRED/Quandl + Russian statistics) 
     - https://research.stlouisfed.org/fred2/
-	- https://www.quandl.com/
-	- https://github.com/epogrebnyak/rosstat-kep-data
+    - https://www.quandl.com/
+    - https://github.com/epogrebnyak/rosstat-kep-data
 
 1.3.2. Seasonal adjustment (X11, Traumo/SEATS).
 
-	
+   ESS guidelines on seasonal adjustment
+   URL: http://ec.europa.eu/eurostat/documents/3859598/6830795/KS-GQ-15-001-EN-N.pdf/d8f1e5f5-251b-4a69-93e3-079031b74bd3 
+
+   Seasonal Adjustment Methodology at BLS
+   URL: http://www.bls.gov/cpi/cpisahoma.htm
+
+   Default procedure: https://github.com/epogrebnyak/rosstat-kep-data/tree/master/seasonality
+      	
 2. Working with macroeconomic time series
 
 2.1. Detrending/filtering and business cycle 
@@ -71,7 +78,7 @@
      
     ...
 	
-3.3. Large-scale models: Fair model - US Economy
+3.2. Large-scale models: Fair model - US Economy
 
     http://fairmodel.econ.yale.edu/mmm1.htm
 
@@ -85,17 +92,20 @@
 	Vol. 83, 523-541 
 (*) URL: http://www.macromodelbase.com/
 
-    Applications -  Monetary and fiscal policy rules
- 
-    See reading list in [Monetary Policy: Theory and Practice - Kiel ASP - Volker Wieland \
+    Applications -  Monetary and fiscal policy rules.  See reading list in 
+    Monetary Policy: Theory and Practice - Kiel ASP - Volker Wieland 
     https://www.ifw-kiel.de/ausbildung/asp/outlines/paper/Wieland2014.pdf
 
 5. Balance of payments and foreign exchange rates
 
 - Balance of payments (BOP)
+
+   ...
+
 - Puzzles in foreign exchange rate forecasting 
 
-    ...
+(*) L Sarno. Viewpoint: Towards a solution to the puzzles in exchange rate economics: where do we stand?
+    http://onlinelibrary.wiley.com/doi/10.1111/j.0008-4085.2005.00298.x/abstract
 
 - Review of methods:
 

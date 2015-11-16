@@ -1,4 +1,4 @@
-# Emprirical Macro
+# Empirical Macro
 **Macroeconomic course for CMF**
 
 11:00 16.11.2015

@@ -53,44 +53,44 @@
    
 3. Estimated structural modelling 
 
-3.1. Modelling GDP components
+3.1. Individual indicators
 
-3.1.1. Consumption 
-
-    ...
-
-3.1.2. Investment
+3.1.1. GDP components - consumption 
 
     ...
 
-3.1.3. Government spending (?)
+3.1.2. GDP components - investment
 
     ...
 
-3.2. Prices and inflation.
+3.1.3. GDP components - government spending (?)
+
+    ...
+
+3.1.4.  Prices and inflation.
      
     ...
 	
 3.3. Large-scale models: Fair model - US Economy
 
-    ...
+    http://fairmodel.econ.yale.edu/mmm1.htm
 
 4. Calibrated models: dynamic stochastic general equilibrium models (DSGE)
-- http://www3.eeg.uminho.pt/economia/nipe/summerschool2012/index_ficheiros/outline.pdf
-- http://www.econ.nyu.edu/user/gertlerm/jep.21.4.pdf
 
-6. Collection and comparison of models 
+   - http://www3.eeg.uminho.pt/economia/nipe/summerschool2012/index_ficheiros/outline.pdf
+   - http://www.econ.nyu.edu/user/gertlerm/jep.21.4.pdf
 
     Wieland, Volker,  Tobias Cwik, Gernot J. Müller, Sebastian Schmidt and Maik Wolters. A New comparative approach 
 	to macroeconomic modeling and policy analysis. Journal of Economic Behavior and Organization, August 2012, 
 	Vol. 83, 523-541 
 (*) URL: http://www.macromodelbase.com/
 
-7. Monetary and fiscal policy rules
+    Applications -  Monetary and fiscal policy rules
+ 
+    See reading list in [Monetary Policy: Theory and Practice - Kiel ASP - Volker Wieland \
+    https://www.ifw-kiel.de/ausbildung/asp/outlines/paper/Wieland2014.pdf
 
-    See reading list in [Monetary Policy: Theory and Practice - Kiel ASP - Volker Wieland](https://www.ifw-kiel.de/ausbildung/asp/outlines/paper/Wieland2014.pdf)
-
-8. Balance of payments and foreign exchange rates
+5. Balance of payments and foreign exchange rates
 
 - Balance of payments (BOP)
 - Puzzles in foreign exchange rate forecasting 

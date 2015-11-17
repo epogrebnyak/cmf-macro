@@ -36,9 +36,11 @@
 * http://www.nes.ru/dataupload/files/programs/econ/Documents/syllabi_2013-2014/Macroeconometrics.pdf
 * http://docentes.fe.unl.pt/~lcnunes/courses/appliedmacroeconometrics0304/Syllabus.pdf
 * http://eml.berkeley.edu/~ygorodni/SyllabusEcon236B_2008.pdf
+* Monetary Economics <http://www.nviegi.net/teaching/master/monmas.htm>
 
 ### Other
 - https://research.stlouisfed.org/publications/review/05/07/Hamilton.pdf
+- EMERGING MARKET BUSINESS CYCLES: THE CYCLE IS THE TREND http://www.nviegi.net/teaching/master/cycle.pdf
 
 
 ### Specialised courses 

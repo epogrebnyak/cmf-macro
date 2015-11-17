@@ -37,6 +37,10 @@
 * http://docentes.fe.unl.pt/~lcnunes/courses/appliedmacroeconometrics0304/Syllabus.pdf
 * http://eml.berkeley.edu/~ygorodni/SyllabusEcon236B_2008.pdf
 
+### Other
+- https://research.stlouisfed.org/publications/review/05/07/Hamilton.pdf
+
+
 ### Specialised courses 
 * Quantitative Economics.  Thomas J. Sargent and John Stachurski. URL: <http://quant-econ.net/>
 * [CEMFI. Nowcasting, Short-Term Forecasting, and Turning-Points Real-Time Detection. A Guide for Empirical Economists.](http://www.cemfi.es/studies/css/course.asp?c=14)

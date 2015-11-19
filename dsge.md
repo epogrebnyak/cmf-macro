@@ -2,15 +2,21 @@
 4 Calibrated models: dynamic stochastic general equilibrium models (DSGE)
 =========================================================================
 
-15:04 17.11.2015
+##Участники:
+-  e.pogrebnyak
+-  gleb_kurovskiy
+-  arthur_v
 
-Участники:
-  e.pogrebnyak
-  gleb_kurovskiy
-  arthur_v
+##Todo - задание участникам(12:59 19.11.2015):
+
+1 дать комментарии к плану занятий (этот файл), просьба прислать отдельным txt файлом
+
+2 у кого есть Matlab - зарегистрироваться http://www.macromodelbase.com/, скачать модели и запустить интерфейс 
+  выбора и работы с моделями, оценить можем ли использовать в курсе
 
 
-План лекции:
+##План лекции:
+
 
 1. Мотивация исследований / история возникнования данного класса моделей (критика структурных моделей)
 
@@ -37,16 +43,19 @@
 
 
 
-Учебники:
+##Учебники:
 
 -   DeJong, David N., and Chetan Dave. 2011.
     Structural Macroeconometrics. Second edition.
     Princeton: Princeton University Press.
 
--   Clarida (бумажная версия)
-   
+-   Fabio Canova. 2007. Methods for Applied Macroeconomic Research
+    Princeton: Princeton University Press.
 
-Стати и источники:
+   
+##Статьи и источники:
+
+-   ЕП: добавть ключевы статьи из macroecomics reader и https://ideas.repec.org/k/qmrbcrl.html
 
 -   Wieland, Volker,  Tobias Cwik, Gernot J. Muller, Sebastian Schmidt and Maik Wolters. A New comparative approach 
     to macroeconomic modeling and policy analysis. Journal of Economic Behavior and Organization, August 2012, 

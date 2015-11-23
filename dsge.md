@@ -2,8 +2,8 @@
 
 I don't know whether the course should be introductory, intermediate or advanced level. Whether it should be more theoretical or applied. I think you should show him these three syllabi: 
 
-A) <http://akson.sgh.waw.pl/~mkolas/Syllabus/ADMacro.pdf>
-B) <http://akson.sgh.waw.pl/~mkolas/Syllabus/ADMacro2.pdf>
+A) <http://akson.sgh.waw.pl/~mkolas/Syllabus/ADMacro.pdf>  
+B) <http://akson.sgh.waw.pl/~mkolas/Syllabus/ADMacro2.pdf>  
 C) <http://akson.sgh.waw.pl/~mkolas/Syllabus/MacroMod.pdf>
 
 Now, A is introduction while B is intermediate level course. Both are theoretical. A is appropriate for student without any knowledge, while B for those who know Ramsey model, which is a workhorse for all NK models. C is rather applied since we've had in in the computer room. Part of the topics can be covered in this theoretical courses to show students why they need such models 

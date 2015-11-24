@@ -14,8 +14,13 @@ akson.sgh.waw.pl
 -----
 See also: 
 
-- Intro to Dynare. <http%3A%2F%2Fpeople.bu.edu%2Frking%2FSZGcourse%2FMSpresentation%2520dynare%2520short.pdf>
-- <http%3A%2F%2Fwww.sfu.ca%2F~kkasa%2FSargent_Dynare.pdf>
+- Intro to Dynare. http%3A%2F%2Fpeople.bu.edu%2Frking%2FSZGcourse%2FMSpresentation%2520dynare%2520short.pdf
+- http%3A%2F%2Fwww.sfu.ca%2F~kkasa%2FSargent_Dynare.pdf
+
+Octave + Dynare:
+- http://www.dynare.org/download/octave/windows
+- http://www.dynare.org/documentation-and-support/quick-start
+
 
 -----
 

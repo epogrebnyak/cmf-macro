@@ -11,6 +11,14 @@ When it comes to the textbooks then I think that the starting point is Gali (200
 
 akson.sgh.waw.pl
 
+-----
+See also: 
+
+- Intro to Dynare. <http%3A%2F%2Fpeople.bu.edu%2Frking%2FSZGcourse%2FMSpresentation%2520dynare%2520short.pdf>
+- <http%3A%2F%2Fwww.sfu.ca%2F~kkasa%2FSargent_Dynare.pdf>
+
+-----
+
 
 4 Calibrated models: dynamic stochastic general equilibrium models (DSGE)
 =========================================================================

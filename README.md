@@ -7,7 +7,7 @@ Last edited 12:47 28.12.2015
 [Введение: макроэкономическая статистика и работа с базами данных временных рядов](#1)
 
 
-## 1
+###### 1
 ## Введение: макроэкономическая статистика и работа с базами данных временных рядов
 ```
 1. Introduction, macroeconomic statistics, time series data sources
@@ -110,7 +110,10 @@ Last edited 12:47 28.12.2015
 ```
 
 
-
+###### 2
+## 2 .Анализ временных рядов c экономическими данными
+###### 2.1
+## 2.1 Фильтры, снятие тренда и реальный деловой цикл
 ```		
 2. Working with macroeconomic time series
 
@@ -119,15 +122,33 @@ Last edited 12:47 28.12.2015
     Introduction to Macro Data. Karel Mertens, Cornell University
     URL: https://courses.cit.cornell.edu/econ614/introduction.pdf       
 
-	Detrending and business cycle facts. Fabio Canova
-	URL: http://apps.eui.eu/Personal/Canova/Articles/debucy.pdf
+    Detrending and business cycle facts. Fabio Canova
+    URL: http://apps.eui.eu/Personal/Canova/Articles/debucy.pdf
 	
-	Resuscitating real business cycles. Robert G. King, Sergio T. Rebelo. // 
-	Handbook of Macroeconomics, Volume 1, Edited by J.B. Taylor and M. Woodford	
-	URL: http://www.tau.ac.il/~yashiv/rbc_handbook.pdf
+    Resuscitating real business cycles. Robert G. King, Sergio T. Rebelo. // 
+    Handbook of Macroeconomics, Volume 1, Edited by J.B. Taylor and M. Woodford	
+    URL: http://www.tau.ac.il/~yashiv/rbc_handbook.pdf
 	
-	James H. Stock, Mark W. Watson. Business cycle fluctuations in US macroeconomic time series
-	URL: http://www.nber.org/papers/w6528.pdf
+    James H. Stock, Mark W. Watson. Business cycle fluctuations in US macroeconomic time series
+    URL: http://www.nber.org/papers/w6528.pdf
+    
+    ЗАДАНИЯ:
+    (2.1.a)
+    - упражнения по снятию тренда/фильтрам: 
+      -- объяснить смысл процедуры (какую проблему решает, каким обарзом, какие ожидаемые резултаты)
+      -- как реализуется с помощью программ
+      -- код для исполнения на  фактических данных 
+     (2.1.b)
+     Составить таблицы корреляций трендов экономических переменных c лагом к ВВП  + их стандартные 
+     отклонения (есть примеры таблицы дам ссылки, ЕП)
+     - интерпертировать такие готовые таблицы
+     - уметь составлять такие таблицы самим (воспроизвости аналог готовой таблицы на более новых данных)
+     - составить экспериментальные таблицы по российским данным
+     (2.1.с)
+     - теория бизнес-цикла - основные положения
+     - рассказать зачем мы снимали тренды, что видно на остатках от трендов и какая теория может остатки описывать
+     
+
 	
 2.2. Vector autoregression (VAR) models
 
@@ -145,12 +166,6 @@ Last edited 12:47 28.12.2015
 ```
 Раздел 2. Задания по подготовке учебных материалов
 
-2.1. Detrending/filtering and business cycle
-- упражнения по снятию тренда: 
-  -- объяснить процедуры 
-  -- прогнать их на фактических данных 
-- составить таблицы корреляций трендов экономических переменных c лагом к ВВП (есть примеры таблицы) + их стандартные отклонения
-- теория бизнес-цикла - основные положения 
 
 2.2. Vector autoregression (VAR) models
 Re: kate_pyltsyna

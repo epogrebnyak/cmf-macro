@@ -256,9 +256,15 @@ Re: (список участников)
     URL: http://crei.cat/people/rossi/Rossi_ExchangeRatePredictability_Feb_13.pdf
 
 - Rouble vs oil
+
+More:
+- трансмиссия на валютном рынке (слайд со схемой)
+- валютные кризисы - несколько
+- роль доллара, резервные валюты
+- валютные режимы
 ```
 Re: Алексей Филиппов - philippov.ap __ gmail.com
-
+pisanov.alexander@gmail.com, 8-985-189-4230 - Писанов Александр
 
 
 ------------------------

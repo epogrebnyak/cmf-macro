@@ -26,3 +26,4 @@ VAR и структурные модели(пп. 2.2. и 3.2.)
    @alexander_pisanov
    @fil_ulyankin 
 ```
+

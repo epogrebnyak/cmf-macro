@@ -1,4 +1,14 @@
-"""Import csv files from web and convert them to pandas dataframes."""
+"""Import csv files from web and convert them to pandas dataframes.
+
+Usage:
+
+   dfm[code]
+   dfq[code]
+   dfa[code]
+
+   'code' can be found at https://raw.githubusercontent.com/epogrebnyak/rosstat-kep-data/master/output/varnames.md
+
+"""
 
 import pandas as pd
 
@@ -19,12 +29,14 @@ dfm = pd.read_csv(DFM_URL)
 # set time index
 dfq, dfm = add_index(dfq, dfm)
 
-#Example:
-RU_CPI <- dfm["CPI_rog"]
-USDRUB <- dfm["RUR_USD_eop"]
-GDP_nominal <- dfq["GDP_bln_rub"]
-housing <- dfa['DWELL_mln_m2']
+if __name__.__eq__("__main__"):
 
-# For available time series codes see:
-# https://raw.githubusercontent.com/epogrebnyak/rosstat-kep-data/master/output/varnames.md
+    #Example:
+    RU_CPI = dfm["CPI_rog"]
+    USDRUB = dfm["RUR_USD_eop"]
+    GDP_nominal = dfq["GDP_bln_rub"]
+    housing = dfa['DWELL_mln_m2']
+
+    # For available time series codes see:
+    # https://raw.githubusercontent.com/epogrebnyak/rosstat-kep-data/master/output/varnames.md
 

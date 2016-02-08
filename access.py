@@ -22,7 +22,7 @@ dfq, dfm = add_index(dfq, dfm)
 #Example:
 RU_CPI <- dfm["CPI_rog"]
 USDRUB <- dfm["RUR_USD_eop"]
-GDP.nominal <- dfq["GDP_bln_rub"]
+GDP_nominal <- dfq["GDP_bln_rub"]
 housing <- dfa['DWELL_mln_m2']
 
 # For available time series codes see:

@@ -19,3 +19,6 @@ March 2001
 ## More links
 <http://www.mathworks.com/help/econ/examples/modeling-the-united-states-economy.html>
 <http://conference.scipy.org/proceedings/scipy2011/pdfs/statsmodels.pdf>
+<http://www2.econ.univpm.it/servizi/hpp/lucchetti/gretl/SVAR.pdf>
+<https://github.com/tomaskrehlik/VARmodels.jl>
+<http://www.learneconometrics.com/gretl/using_gretl_for_POE4.pdf>

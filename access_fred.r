@@ -87,4 +87,4 @@ GDPC1 # Data values should have been retrieved successfully.
 #YOUR CODE HERE:####
 ####################
 
-## TODO: submonthly frequencies.
+## TODO: submonthly frequencies, aggregation.

@@ -53,10 +53,8 @@ fred.data.values <- function(id,start,end,csv)
   data.start <- as.Date(substring(gsub(" ","",data[8],fixed=TRUE),11,20))
   data.end <- as.Date(substring(gsub(" ","",data[8],fixed=TRUE),23,32))
   
-  if (!(data.id==id)) err <- err+1 else err
-  if (!(data.id==id)) print("Error: 'fred.data.file' time series' id doesn't match the id set by user. Report to the developer.")
-  if (!((data.start<=start)&(data.end>=end))) err <- err+1 else err <- err
-  if (!((data.start<=start)&(data.end>=end))) print("Error: check dates (start/end) parameters. Start/end date should be in time-series' date range. Output is set to zero. You can use 'fred.data.description' function for date range info.")
+  if (!(data.id==id)) {err <- err+1;print("Error: 'fred.data.file' time series' id doesn't match the id set by user. Report to the developer.")} else err
+  if (!((data.start<=start)&(data.end>=end))) {err <- err+1;print("Error: check dates (start/end) parameters. Start/end date should be in time-series' date range. Output is set to zero. You can use 'fred.data.description' function for date range info.")} else err <- err
   
   parse <- gsub(" ","",data,fixed=TRUE)
   parse.index <- match("DATEVALUE",parse)

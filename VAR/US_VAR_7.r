@@ -17,10 +17,13 @@
 # - получать данные напр€мую из FREDа по URL + разделить подготовку данных и саму модель
 # - св€зать с лекцией - дать пример решени€ еще более простой многомерной AR модели (2-3 переменные)
 #   но не внутри пакета, а руками - чтобы учащиес€ понимали что пакет делает +  комментарии к пакетам
-# - показать, когда VAR не срабатывает - при резком изменении условий, сдвигах и т.д. - в чем сост€от ограничени€ моедли
+# - показать, когда VAR не срабатывает - при резком изменении условий, сдвигах и т.д. - в чем сост€от ограничени€ моедли (см. README)
 # - более подробно объ€снить качество модели - нормальность остатков и т.д. 
 # - российский вариант?
 
+## - wrap data import in 'try'
+## - separate data and model
+## - откуда функци€ ??hpfilter
 
 install.packages("vars")
 install.packages("car")
@@ -44,7 +47,7 @@ library(forecast)
 library(sandwich)
 
 #чтение данных
-setwd("C:\Users\≈вгений\Documents\GitHub\bis\cmf-macro\VAR")
+setwd("C:/Users/≈вгений/Documents/GitHub/bis/cmf-macro/\VAR")
 GDP <- read.csv("GDP.csv", header=TRUE, sep=";")
 ThreeMTrBill <- read.csv("ThreeMTrBill.csv", header=TRUE, sep=";")
 TenTrBill <- read.csv("TenTrBill.csv", header=TRUE, sep=";")

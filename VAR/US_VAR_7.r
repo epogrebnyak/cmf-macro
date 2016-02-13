@@ -1,25 +1,25 @@
 ###
-### РџРѕСЃС‚СЂРѕРµРЅРёРµ VAR РјРѕРґРµР»Рё СЌРєРѕРЅРѕРјРёРєРё РЎРЁРђ - РєРѕРґ РЅР° R
+### Построение VAR модели экономики США - код на R
 ### 08.02.2016
-### РђРІС‚РѕСЂ: Р•РєР°С‚РµСЂРёРЅР° РџС‹Р»СЊС†С‹РЅР°
+### Автор: Екатерина Пыльцына
 ### 
-### РСЃС…РѕРґРЅР°СЏ СЃСЃС‹Р»РєР° (Matlab):
+### Исходная ссылка (Matlab):
 ###     http://www.mathworks.com/help/econ/examples/modeling-the-united-states-economy.html
 ###
 ###
-### РџР»Р°РЅ Р·Р°РЅСЏС‚РёР№: 
-###      https://github.com/epogrebnyak/cmf-macro#22-var-РјРѕРґРµР»Рё
+### План занятий: 
+###      https://github.com/epogrebnyak/cmf-macro#22-var-модели
 ###
 
 
-# С‡С‚Рѕ РјРѕР¶РЅРѕ СЃРґРµР»Р°С‚СЊ (РґР»СЏ РѕР±СЃСѓР¶РґРµРЅРёСЏ): 
+# что можно сделать (для обсуждения): 
 # 15:19 08.02.2016
-# - РїРѕР»СѓС‡Р°С‚СЊ РґР°РЅРЅС‹Рµ РЅР°РїСЂСЏРјСѓСЋ РёР· FREDР° РїРѕ URL + СЂР°Р·РґРµР»РёС‚СЊ РїРѕРґРіРѕС‚РѕРІРєСѓ РґР°РЅРЅС‹С… Рё СЃР°РјСѓ РјРѕРґРµР»СЊ
-# - СЃРІСЏР·Р°С‚СЊ СЃ Р»РµРєС†РёРµР№ - РґР°С‚СЊ РїСЂРёРјРµСЂ СЂРµС€РµРЅРёСЏ РµС‰Рµ Р±РѕР»РµРµ РїСЂРѕСЃС‚РѕР№ РјРЅРѕРіРѕРјРµСЂРЅРѕР№ AR РјРѕРґРµР»Рё (2-3 РїРµСЂРµРјРµРЅРЅС‹Рµ)
-#   РЅРѕ РЅРµ РІРЅСѓС‚СЂРё РїР°РєРµС‚Р°, Р° СЂСѓРєР°РјРё - С‡С‚РѕР±С‹ СѓС‡Р°С‰РёРµСЃСЏ РїРѕРЅРёРјР°Р»Рё С‡С‚Рѕ РїР°РєРµС‚ РґРµР»Р°РµС‚ +  РєРѕРјРјРµРЅС‚Р°СЂРёРё Рє РїР°РєРµС‚Р°Рј
-# - РїРѕРєР°Р·Р°С‚СЊ, РєРѕРіРґР° VAR РЅРµ СЃСЂР°Р±Р°С‚С‹РІР°РµС‚ - РїСЂРё СЂРµР·РєРѕРј РёР·РјРµРЅРµРЅРёРё СѓСЃР»РѕРІРёР№, СЃРґРІРёРіР°С… Рё С‚.Рґ. - РІ С‡РµРј СЃРѕСЃС‚СЏРѕС‚ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РјРѕРµРґР»Рё
-# - Р±РѕР»РµРµ РїРѕРґСЂРѕР±РЅРѕ РѕР±СЉСЏСЃРЅРёС‚СЊ РєР°С‡РµСЃС‚РІРѕ РјРѕРґРµР»Рё - РЅРѕСЂРјР°Р»СЊРЅРѕСЃС‚СЊ РѕСЃС‚Р°С‚РєРѕРІ Рё С‚.Рґ. 
-# - СЂРѕСЃСЃРёР№СЃРєРёР№ РІР°СЂРёР°РЅС‚?
+# - получать данные напрямую из FREDа по URL + разделить подготовку данных и саму модель
+# - связать с лекцией - дать пример решения еще более простой многомерной AR модели (2-3 переменные)
+#   но не внутри пакета, а руками - чтобы учащиеся понимали что пакет делает +  комментарии к пакетам
+# - показать, когда VAR не срабатывает - при резком изменении условий, сдвигах и т.д. - в чем состяот ограничения моедли
+# - более подробно объяснить качество модели - нормальность остатков и т.д. 
+# - российский вариант?
 
 
 install.packages("vars")
@@ -43,24 +43,24 @@ library(mFilter)
 library(forecast)
 library(sandwich)
 
-#С‡С‚РµРЅРёРµ РґР°РЅРЅС‹С…
+#чтение данных
+setwd("C:\Users\Евгений\Documents\GitHub\bis\cmf-macro\VAR")
+GDP <- read.csv("GDP.csv", header=TRUE, sep=";")
+ThreeMTrBill <- read.csv("ThreeMTrBill.csv", header=TRUE, sep=";")
+TenTrBill <- read.csv("TenTrBill.csv", header=TRUE, sep=";")
+COE <- read.csv("COE.csv", header=TRUE, sep=";")
+CPI <- read.csv("CPI.csv", header=TRUE, sep=";")
+GDPDEF <- read.csv("GDPDEF.csv", header=TRUE, sep=";")
+GI <- read.csv("GI.csv", header=TRUE, sep=";")
+M1 <- read.csv("M1.csv", header=TRUE, sep=";")
+M2 <- read.csv("M2.csv", header=TRUE, sep=";")
+NonFarmInd <- read.csv("NonFarmInd.csv", header=TRUE, sep=";")
+PerCons <- read.csv("PerCons.csv", header=TRUE, sep=";")
+PrInv <- read.csv("PrInv.csv", header=TRUE, sep=";")
+RES <- read.csv("RES.csv", header=TRUE, sep=";")
+UNRATE <- read.csv("UNRATE.csv", header=TRUE, sep=";")
 
-GDP <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/GDP.csv", header=TRUE, sep=";")
-ThreeMTrBill <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/ThreeMTrBill.csv", header=TRUE, sep=";")
-TenTrBill <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/TenTrBill.csv", header=TRUE, sep=";")
-COE <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/COE.csv", header=TRUE, sep=";")
-CPI <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/CPI.csv", header=TRUE, sep=";")
-GDPDEF <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/GDPDEF.csv", header=TRUE, sep=";")
-GI <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/GI.csv", header=TRUE, sep=";")
-M1 <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/M1.csv", header=TRUE, sep=";")
-M2 <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/M2.csv", header=TRUE, sep=";")
-NonFarmInd <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/NonFarmInd.csv", header=TRUE, sep=";")
-PerCons <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/PerCons.csv", header=TRUE, sep=";")
-PrInv <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/PrInv.csv", header=TRUE, sep=";")
-RES <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/RES.csv", header=TRUE, sep=";")
-UNRATE <- read.csv("C:/Users/Kate/Desktop/VaR_macro/USA/UNRATE.csv", header=TRUE, sep=";")
-
-# СѓСЃС‚Р°РЅРѕРІРєР° РґР°С‚ (РїРѕСЃРєРѕР»СЊРєСѓ РЅРµ РІСЃРµ РґР°РЅРЅС‹Рµ РёРјРµСЋС‚ РѕРґРёРЅР°РєРѕРІСѓСЋ РґР»РёРЅСѓ Рё РїРµСЂРёРѕРґРёС‡РЅРѕСЃС‚СЊ, РЅСѓР¶РЅРѕ РїСЂРёРІРµСЃС‚Рё Рє РѕРґРЅРѕРјСѓ С„РѕСЂРјР°С‚Сѓ)
+# установка дат (поскольку не все данные имеют одинаковую длину и периодичность, нужно привести к одному формату)
 
 StartDate <- "01.01.1959"
 EndDate <- "01.07.2015"
@@ -70,7 +70,7 @@ EndYear <- 2015
 Add <- 2
 T <- 4*(EndYear - StartYear) + Add
 
-# С„СѓРЅРєС†РёСЏ, РѕР±СЂРµР·Р°СЋС‰Р°СЏ РґР»РёРЅРЅС‹Рµ РґР°РЅРЅС‹Рµ, РґРѕ СЃР°РјС‹С… РєРѕСЂРѕС‚РєРёС… Рё СЃ РЅР°РёРјРµРЅСЊС€РёРј РїРµСЂРёРѕРґРѕРј
+# функция, обрезающая длинные данные, до самых коротких и с наименьшим периодом
 cutting <- function (x)
 {
 StartInd <- which (x[,1]==StartDate)
@@ -90,7 +90,7 @@ x[,2] <- log(x[,2], base = exp(1))
 return (x[1:T,2])
 }
 
-# РѕР±СЂРµР·Р°РµРј РґР°РЅРЅС‹Рµ
+# обрезаем данные
 
 GDP <- cutting(GDP)
 ThreeMTrBill <- cutting(ThreeMTrBill)
@@ -107,7 +107,7 @@ PrInv <- cutting(PrInv)
 RES <- cutting(RES)
 UNRATE <- cutting(UNRATE)
 
-# РїСЂРёРІРµРґРµРЅРёРµ РґР°РЅРЅС‹С… Рє РЅСѓР¶РЅРѕРјСѓ С„РѕСЂРјР°С‚Сѓ (РѕР±СЂР°С‰РµРЅРёРµ РїСЂРѕС†РµРЅС‚РѕРІ РІ РґРѕР»Рё Рё С‚.Рґ.)
+# приведение данных к нужному формату (обращение процентов в доли и т.д.)
 
 rRES <- 0.01*(RES)
 rTenTrBill <- 0.01*(TenTrBill)
@@ -127,7 +127,7 @@ TenTrBill <- log(ret2tick(rTenTrBill))
 ThreeMTrBill <- log(ret2tick(rThreeMTrBill))
 UNRATE <-log(ret2tick(rUNRATE))
 
-# С„СѓРЅРєС†РёСЏ РїРµСЂРµС…РѕРґР° Рє РіРѕРґРѕРІС‹Рј Р·РЅР°С‡РµРЅРёСЏРј Рё Р·РЅР°С‡РµРЅРёСЏРј РІ СЂР°Р·РЅРѕСЃС‚СЏС…
+# функция перехода к годовым значениям и значениям в разностях
 
 annual <- function(x)
 {
@@ -140,7 +140,7 @@ for (i in 1:(T/4))
 return(x[1:(T/4)])
 }
 
-# РїРµСЂРµС…РѕРґ Рє РіРѕРґРѕРІС‹Рј Р·РЅР°С‡РµРЅРёСЏРј Рё Р·РЅР°С‡РµРЅРёСЏРј РІ СЂР°Р·РЅРѕСЃС‚СЏС…
+# переход к годовым значениям и значениям в разностях
 
 rCons <- annual(PerCons)
 rCPI <- annual(CPI) 
@@ -153,17 +153,17 @@ rM1 <- annual(M1)
 rM2 <- annual(M2)
 rWAGES <- annual(COE)
 
-# СЃС‚СЂРѕРёРј РІРµРєС‚РѕСЂ, РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ Рё Р±СѓРґРµРј СЃС‚СЂРѕРёС‚СЊ VAR
+# строим вектор, для которого и будем строить VAR
 
 dat <- cbind(rGDP, rDEF, rWAGES, rHOURS, rThreeMTrBill, rCons, rINV, rUNRATE)
 
-# Р·Р°РІРѕРґРёРј РІСЂРµРјСЏ
+# заводим время
 
 TimeSeries <- rep(0, times=(T/4))
 for (i in 1:(T/4))
 TimeSeries[i] <- i
 
-# РїРѕСЃС‚СЂРѕРёРј РЅРµСЃРєРѕР»СЊРєРѕ РіСЂР°С„РёРєРѕРІ РґР»СЏ РґРµРјРѕРЅСЃС‚СЂР°С†РёРё РїРѕРІРµРґРµРЅРёСЏ РґР°РЅРЅС‹С…
+# построим несколько графиков для демонстрации поведения данных
 
 plot(TimeSeries, rINV,type="l")
 lines(rGDP,col="red")
@@ -171,21 +171,21 @@ lines(rGDP,col="red")
 plot(TimeSeries, rCPI,type="l")
 lines(rDEF,col="red")
 
-# РІС‹Р±РёСЂР°РµРј РїРѕСЂСЏРґРѕРє VAR (РјРѕРґРµР»СЊ РІС‹Р±РёСЂР°РµС‚ РїРѕСЂСЏРґРѕРє 10, РѕРґРЅР°РєРѕ С‚Р°РєРѕР№ РїРѕСЂСЏРґРѕРє СЃР»РёС€РєРѕРј РІС‹СЃРѕРє Рё РїРѕСЃС‚СЂРѕРёС‚СЊ РїСЂРѕРіРЅРѕР·С‹ 
-# РїРѕ РЅРµРјСѓ РЅРµ СѓРґР°РµС‚СЃСЏ (РЅРµ СЃРјРѕРі РѕРЅ СЃС‚РѕР»СЊРєРѕ РѕС†РµРЅРёС‚СЊ РІС‹РґР°РІР°Р» NA), РїРѕСЌС‚РѕРјСѓ  РґР°Р»СЊС€Рµ РёСЃРїРѕР»СЊР·СѓРµРј РїРѕСЂСЏРґРѕРє 5
+# выбираем порядок VAR (модель выбирает порядок 10, однако такой порядок слишком высок и построить прогнозы 
+# по нему не удается (не смог он столько оценить выдавал NA), поэтому  дальше используем порядок 5
 
 VARselect(dat, lag.max = 30, type = c("const"),
 season = NULL, exogen = NULL)
 
-# СЃС‚СЂРѕРёРј VAR
+# строим VAR
 
 dataVAR <- VAR(dat, p = 5, type = c("const"),
 season = NULL, exogen = NULL, lag.max = NULL,
 ic = c("AIC", "HQ", "SC", "FPE"))
 print(dataVAR)
 
-# РїСЂРѕРІРµСЂРєР° VAR РЅР° С‚РµСЃС‚Р°С… (РѕР±РЅР°СЂСѓР¶РёРІР°РµС‚СЃСЏ Рё Р°РІС‚РѕРєРѕСЂСЂРµР»СЏС†РёСЏ Рё РіРµС‚РµСЂРѕСЃРєРµРґР°СЃС‚РёС‡РЅРѕСЃС‚СЊ), РѕРґРЅР°РєРѕ РјРѕРґРµР»СЊ СЃС‚Р°Р±РёР»СЊРЅР°
-# РЅРµ Р·РЅР°СЋ, РєР°Рє Р±РѕСЂРѕС‚СЊСЃСЏ, С‚Р°Рє РєР°Рє РЅРµ Р·РЅР°СЋ, РєР°Рє СЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕСЃС‚Р°С‚РєРё РќСЊСЋРё-Р’РµСЃС‚Р° (РјРѕР¶РЅРѕ РјР°С‚СЂРёС†Сѓ РїРѕР»СѓС‡РёС‚СЊ РєРѕРІР°СЂРёР°С†РёРё, Р° РєР°Рє СЃРґРµР»Р°С‚СЊ РЅР° РЅРµРµ РїРѕРїСЂР°РІРєСѓ РЅРµ РїРѕРЅСЏС‚РЅРѕ)
+# проверка VAR на тестах (обнаруживается и автокорреляция и гетероскедастичность), однако модель стабильна
+# не знаю, как бороться, так как не знаю, как спользовать остатки Ньюи-Веста (можно матрицу получить ковариации, а как сделать на нее поправку не понятно)
 
 arch.test(dataVAR, lags.single = 16, lags.multi = 5, multivariate.only = TRUE)
 
@@ -208,11 +208,11 @@ h = 0.15, dynamic = FALSE, rescale = TRUE)
   diagnostics = FALSE, sandwich = TRUE, ar.method = "ols", data = list(),
   verbose = FALSE)
 
-# РІС‹РІРѕРґ РѕС†РµРЅРµРЅРЅРѕР№ VAR
+# вывод оцененной VAR
 
 plot(dataVAR, boundary = TRUE)
 
-# СЃРїСЂРѕРіРЅРѕР·РёСЂСѓРµРј РїРѕСЃР»РµРґРЅРёРµ 10 Р·РЅР°С‡РµРЅРёР№, СЂР°Р·РґРµР»РёРІ РІС‹Р±РѕСЂРєСѓ РЅР° РѕР±СѓС‡Р°СЋС‰СѓСЋ Рё С‚РµСЃС‚РѕРІСѓСЋ
+# спрогнозируем последние 10 значений, разделив выборку на обучающую и тестовую
 
 data_for_prediction <- dat[1:216,]
 VARselect(data_for_prediction, lag.max = 30, type = c("const"),
@@ -221,56 +221,56 @@ dataVAR_for_pr <- VAR(data_for_prediction, p = 5, type = c("const"),
 season = NULL, exogen = NULL, lag.max = NULL,
 ic = c("AIC", "HQ", "SC", "FPE"))
 
-# РїСЂРѕРіРЅРѕР·, РїРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєР° РїСЂРѕРіРЅРѕР·Р° Рё СЂР°СЃРїРµС‡Р°С‚РєР° Р·РЅР°С‡РµРЅРёР№
+# прогноз, построение графика прогноза и распечатка значений
 
 dataVARpred <- predict(dataVAR_for_pr, n.ahead = 10, ci = 0.95)
 plot(dataVARpred)
 print(dataVAR)
 
-# РїСЂРѕРІРµСЂРёРј РєР°С‡РµСЃС‚РІРѕ РїСЂРѕРіРЅРѕР·Р°, СЂР°СЃРїРµС‡Р°С‚Р°РІ Р·РЅР°С‡РµРЅРёРµ MAPE
+# проверим качество прогноза, распечатав значение MAPE
 
 Len <- length(dat)/8
 print(dat[(Len-9):Len,8]-dataVARpred$fcst$rUNRATE[,1])
 print((dat[(Len-9):Len,8]-dataVARpred$fcst$rUNRATE[,1])/dat[(Len-9):Len,8])
 
-# СЂР°СЃРїРµС‡Р°С‚Р°РµРј the forecast error variance decomposition of a VAR(p) for n.ahead steps
+# распечатаем the forecast error variance decomposition of a VAR(p) for n.ahead steps
 
 fevd(dataVAR, n.ahead = 10)
 
-# РїСЂРѕРІРµРґРµРј РёРјРїСѓР»СЊСЃРЅС‹Р№ Р°РЅР°Р»РёР·
+# проведем импульсный анализ
 
 irfdata <- irf(dataVAR, impulse = NULL, response = NULL, n.ahead = 10, ortho = TRUE,
 cumulative = FALSE, boot = TRUE, ci = 0.95, runs = 100, seed = NULL)
 
 plot(irfdata)
 
-# С‚РµРїРµСЂСЊ СЃРїСЂРѕРіРЅРѕР·РёСЂСѓРµРј СЂРµР°Р»СЊРЅС‹Р№ Р’Р’Рџ РІ Р°Р±СЃРѕР»СЋС‚РЅС‹С… Р·РЅР°С‡РµРЅРёСЏС…
+# теперь спрогнозируем реальный ВВП в абсолютных значениях
 
 dataAbs <- cbind(GDP, GDPDEF, COE, NonFarmInd, ThreeMTrBill, PerCons, PrInv, UNRATE)
 VARselect(dataAbs, lag.max = 20, type = c("const"),
 season = NULL, exogen = NULL)
 
-# Р±РѕР»СЊС€РёРЅСЃС‚РІРѕ РєСЂРёС‚РµСЂРёР°РµРІ РІС‹Р±РёСЂР°СЋС‚ 2-РѕР№ РїРѕСЂСЏРґРѕРє, РѕРґРЅР°РєРѕ РђРєР°РёРєРµ РІС‹Р±РёСЂР°РµС‚ 10, РЅРѕ 10 СЃР»РёС€РєРѕРј Р±РѕР»СЊС€РѕР№ РїРѕСЂСЏРґРѕРє, РІС‹Р±РµСЂРµРј 2-РѕР№
+# большинство критериаев выбирают 2-ой порядок, однако Акаике выбирает 10, но 10 слишком большой порядок, выберем 2-ой
 
 dataVARAbs <- VAR(dataAbs, p = 2, type = c("const"),
 season = NULL, exogen = NULL, lag.max = NULL,
 ic = c("AIC", "HQ", "SC", "FPE"))
 
-# СЂР°СЃРїРµС‡Р°С‚Р°РµРј VAR
+# распечатаем VAR
 
 print(dataVARAbs)
 
-# СЃРїСЂРѕРіРЅРѕР·РёСЂСѓРµРј РЅР° 10 РєРІР°СЂС‚Р°Р»РѕРІ РІРїРµСЂРµРґ (СЃРЅР°С‡Р°Р»Р° РіСЂР°С„РёРєРё РІСЃРµС… РїСЂРѕРіРЅРѕР·РѕРІ, РїРѕС‚РѕРј С‚РѕР»СЊРєРѕ Р’Р’Рџ РїРѕРїСЂР°РІР»РµРЅРЅС‹Р№ РЅР° РґРµС„Р»СЏС‚РѕСЂ)
+# спрогнозируем на 10 кварталов вперед (сначала графики всех прогнозов, потом только ВВП поправленный на дефлятор)
 
 dataVARpredAbs <- predict(dataVARAbs, n.ahead = 10, ci = 0.95)
 plot(dataVARpredAbs)
 plot(dataVARpredAbs$fcst$GDP[,1]-dataVARpredAbs$fcst$GDPDEF[,1])
 
-# СЂР°СЃРїРµС‡Р°С‚Р°РµРј СЃРїСЂРѕРіРЅРѕР·РёСЂРѕРІР°РЅРЅС‹Р№ Р’Р’Рџ
+# распечатаем спрогнозированный ВВП
 
 print(dataVARpredAbs$fcst$GDP[,1]-dataVARpredAbs$fcst$GDPDEF[,1])
 
-# РІС‹РґРµР»СЏРµРј С‚СЂРµРЅРґ Рё С†РёРєР» Рё СЃС‚СЂРѕРёРј РёС…
+# выделяем тренд и цикл и строим их
 
 y <- ts(log(dataVARpredAbs$fcst$GDP[,1]-dataVARpredAbs$fcst$GDPDEF[,1]), start = c(1959, 8), freq = 2)
 stl.y <- stl(y,s.window="periodic",robust=FALSE)

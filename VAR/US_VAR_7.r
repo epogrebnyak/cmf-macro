@@ -6,7 +6,7 @@
 ### Исходная ссылка (Matlab):
 ###     http://www.mathworks.com/help/econ/examples/modeling-the-united-states-economy.html
 ###
-###
+### 
 ### План занятий: 
 ###      https://github.com/epogrebnyak/cmf-macro#22-var-модели
 ###

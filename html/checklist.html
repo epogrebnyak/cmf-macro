@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>CMF Empirical Macro Overview</title>
+    <meta charset="utf-8">
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- Also sourceable form http://www.jmlilly.net/liminal/talks/template.html -->
+	
+    <style type="text/css">
+	
+      body {font-family: helvetica, sans-serif}
+      
+      h1, h2, h3 { 
+        font-weight: normal;
+        color:#33A1C9;
+      }
+	  
+    </style>
+	
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# CMF Empirical Macroeconomics 2016
+
+Presented by Evgeniy Pogrebnyak
+
+Team: <https://macrocmf.slack.com/>
+
+Home repo: <https://github.com/epogrebnyak/cmf-macro>
+
+
+---
+
+# Course goal
+
+Learn skills for data-driven, replicable and explicit analysis of Russian economy using econometrics in R/python. 
+
+# Required skillsets
+
+- macroeconomics
+- economic statistics
+- econometrics
+- programming
+
+TODO: best books in each subject
+
+---
+
+# Main components:
+
+1. Statistics frameworks: IO tables, SNA, flow of funds
+2. Time series data sources
+3. Seasonality, detrending and business cycle 
+4. Structural regressions for key macroeconomic variables   
+5. Whole economy modelling: 
+ - structural simultaneous equations
+ - vector autoregressions (VAR)
+ - general equilibrium models (DSGE)
+
+###Extra lectures:
+- Nowcasting
+- BOP + FX
+- Money, banks and credit
+- Monetary and fiscal policy
+
+---
+
+![image](https://cloud.githubusercontent.com/assets/9265326/12965783/05560550-d06a-11e5-9185-310e0d599e79.png)
+ 
+---
+# Подготовка курса
+
+
+###1. Statistics frameworks
+
+- подготовлена  лекция и задания для студентов по **МОБ, СНС и flow of funds**
+
+###2. Time series data sources
+
+- опробирован интерфейс для **FRED** и **KEP** 
+
+- данные FRED и KEP:
+  - уверенно **модифицируются**,
+  - **рисуются** на графиках
+  - **выгружаются** в CSV
+
+---
+
+###3. Seasonality, detrending and business cycle
+
+Снятие сезонности временных рядов:
+- изложены подходы
+- дан код "наивных" алгоритмов 
+- показаны принципы работы [X12 и TRAMO/SEATS][seas], 
+- рекомендованы библиотеки для R/python 
+
+
+Тренд и совместная динамика переменных:
+- воспроизведены **таблицы** по совместной динамике макропеременных по США и России
+- сделано **задание** по анализу этих таблиц для студентов
+- кратко изложены подходы теории **реального бизнес цикла**, обясняющие такую динамику
+
+[seas]:https://ec.europa.eu/eurostat/sa-elearning/seasonal-adjustment-programs
+---
+
+###4. Structural regressions for key macroeconomic variables
+Проведен анализ ключевых макропеременных:
+ - выдвинуты тезисы о том, что может объяснять динамику показателя
+ - построены простые регрессии в R с использованием данных КЕP
+ - дан содержательный комментарий по результатам анализа
+
+Переменные: 
+- ВВП и производство
+- Инфляция
+- Бюджет
+- Население
+- Инвестиции
+- Внешняя торговля и валютный курс
+
+---
+
+###5. Whole economy modelling
+
+Cтруктурные модели, VAR, DSGE:  
+ (a) принципы построения и оценки   
+ (b) программынй код простейших моделей  
+ (c) обзор построения и примеры использования более сложных моделей  
+ (d) сильные и слабые стороны методологии  
+
+
+###Дополнительная часть
+- Nowcasting
+- BOP+FX
+- Банки и ДКП
+- анализ политики
+
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

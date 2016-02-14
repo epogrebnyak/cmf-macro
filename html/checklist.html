@@ -49,7 +49,7 @@ TODO: best books in each subject
 
 ---
 
-# Main components:
+### Main lectures
 
 1. Statistics frameworks: IO tables, SNA, flow of funds
 2. Time series data sources
@@ -60,7 +60,7 @@ TODO: best books in each subject
  - vector autoregressions (VAR)
  - general equilibrium models (DSGE)
 
-###Extra lectures:
+###Extra lectures
 - Nowcasting
 - BOP + FX
 - Money, banks and credit
@@ -71,14 +71,18 @@ TODO: best books in each subject
 ![image](https://cloud.githubusercontent.com/assets/9265326/12965783/05560550-d06a-11e5-9185-310e0d599e79.png)
  
 ---
-# Подготовка курса
-
 
 ###1. Statistics frameworks
 
+Ассистенты: ...
+
 - подготовлена  лекция и задания для студентов по **МОБ, СНС и flow of funds**
 
+---
+
 ###2. Time series data sources
+
+Ассистенты: Александр Писанов
 
 - опробирован интерфейс для **FRED** и **KEP** 
 
@@ -89,7 +93,9 @@ TODO: best books in each subject
 
 ---
 
-###3. Seasonality, detrending and business cycle
+###3.1 Seasonality
+
+Ассистенты: Глеб Куровский
 
 Снятие сезонности временных рядов:
 - изложены подходы
@@ -97,13 +103,22 @@ TODO: best books in each subject
 - показаны принципы работы [X12 и TRAMO/SEATS][seas], 
 - рекомендованы библиотеки для R/python 
 
+[seas]:https://ec.europa.eu/eurostat/sa-elearning/seasonal-adjustment-programs
+
+---
+
+###3.2 Detrending and business cycle
+
+Ассистенты: ...
 
 Тренд и совместная динамика переменных:
-- воспроизведены **таблицы** по совместной динамике макропеременных по США и России
+- воспроизведены **таблицы** по совместной динамике макропеременных по США и России:
+  - ссылка 1 
+  - ссылка 2 
 - сделано **задание** по анализу этих таблиц для студентов
 - кратко изложены подходы теории **реального бизнес цикла**, обясняющие такую динамику
 
-[seas]:https://ec.europa.eu/eurostat/sa-elearning/seasonal-adjustment-programs
+
 ---
 
 ###4. Structural regressions for key macroeconomic variables
@@ -112,31 +127,61 @@ TODO: best books in each subject
  - построены простые регрессии в R с использованием данных КЕP
  - дан содержательный комментарий по результатам анализа
 
-Переменные: 
-- ВВП и производство
-- Инфляция
-- Бюджет
-- Население
-- Инвестиции
-- Внешняя торговля и валютный курс
+См: [подробный план анализа](https://github.com/epogrebnyak/rosstat-kep-data/blob/master/notes/time_series_tasks.md#Блок-3Задания-по-разделам)  
+ 
+ 
+Тематика                        |  Ассистент                
+--------------------------------|------------------------ 
+ВВП и производство   | ...
+Инфляция | ...
+Бюджет | ...
+Население | ...
+Инвестиции | ...
+Внешняя торговля и валютный курс | Александр Писанов
+
+TODO: ссылка на план анализа 
 
 ---
 
-###5. Whole economy modelling
+##5. Whole economy modelling
+###5.1 Cтруктурные модели  
 
-Cтруктурные модели, VAR, DSGE:  
+Ассистенты: Екатерина Пыльцина 
+
  (a) принципы построения и оценки   
- (b) программынй код простейших моделей  
+ (b) программный код простейших вариантов модели
  (c) обзор построения и примеры использования более сложных моделей  
- (d) сильные и слабые стороны методологии  
+ (d) сильные и слабые стороны методологии
 
+---
+###5.2 VAR  
 
+Ассистенты: Екатерина Пыльцина 
+
+ (a) принципы построения и оценки   
+ (b) программный код простейших вариантов модели
+ (c) обзор построения и примеры использования более сложных моделей  
+ (d) сильные и слабые стороны методологии
+ 
+---
+###5.3 DSGE
+
+Ассистенты: ...
+  
+ (a) принципы построения и оценки   
+ (b) программный код простейших вариантов модели
+ (c) обзор построения и примеры использования более сложных моделей  
+ (d) сильные и слабые стороны методологии
+ 
+ 
+ 
+<!--
 ###Дополнительная часть
 - Nowcasting
 - BOP+FX
 - Банки и ДКП
 - анализ политики
-
+-->
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">

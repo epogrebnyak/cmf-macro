@@ -1,3 +1,6 @@
+<http://epogrebnyak.github.io/cmf-macro/>
+
+
 # Empirical Macro - macroeconomic course for CMF
 
 Drafted by Evgeny Pogrebnyak e.pogrebnyak __ gmail com   

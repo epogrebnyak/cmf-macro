@@ -90,3 +90,11 @@ fred_to_csv = function(id)
   warning(paste("Wrote ", fn, " to current working directory: ", getwd()))
   return(file.path(getwd(),fn)) 
 }
+
+id = 'CPIAUCSL'
+ts_zoo = get_fred_zoo(id)
+fred_to_csv(id)
+
+
+
+
